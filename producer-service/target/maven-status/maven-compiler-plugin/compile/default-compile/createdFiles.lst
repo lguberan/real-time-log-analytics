@@ -1,0 +1,4 @@
+com/guberan/producer/model/LogMessage.class
+com/guberan/producer/Main.class
+com/guberan/producer/ProducerServiceApplication.class
+com/guberan/producer/service/LogProducer.class
