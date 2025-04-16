@@ -24,12 +24,8 @@ public class LogProducer {
 
     @Scheduled(fixedRate = 5000)
     public void sendLog() throws JsonProcessingException {
-        LogMessage log = new LogMessage(
-                Instant.now().toString(),
-                "auth-service",
-                levels[random.nextInt(levels.length)],
-                "Sample log message #" + random.nextInt(1000)
-        );
+        LogMessage log = new LogMessage(null, Instant.now().toString(), "producer-service",
+                levels[random.nextInt(levels.length)], "Sample log message #" + random.nextInt(1000));
 
         String json = objectMapper.writeValueAsString(log);
         kafkaTemplate.send("logs-dev", json);

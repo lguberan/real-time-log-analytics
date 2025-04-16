@@ -10,6 +10,10 @@ spring:
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       auto-offset-reset: earliest
 
+  elasticsearch:
+    uris: http://localhost:9200
+    
 logging:
   level:
     root: INFO
+    com.guberan: DEBUG

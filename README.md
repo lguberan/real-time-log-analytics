@@ -1,8 +1,11 @@
 # Real-Time Log Analytics Platform
 
-This project demonstrates a scalable architecture for real-time log ingestion, processing, and analysis using Apache Kafka and Spring Boot.
+This project demonstrates a scalable architecture for real-time log ingestion, processing, and analysis using Apache
+Kafka and Spring Boot.
 
 ## 🧱 Architecture Overview
+
+![Architecture Diagram](docs/architecture.png)
 
 - **Log Producer (Spring Boot)**: Simulates application logs and sends them to Kafka.
 - **Kafka Broker**: Manages log topics and message streaming.
