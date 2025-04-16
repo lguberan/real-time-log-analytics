@@ -1,34 +1,57 @@
-# Real-Time Log Analytics Platform
+# Real-Time Log Analytics
 
-This project demonstrates a scalable architecture for real-time log ingestion, processing, and analysis using Apache
-Kafka and Spring Boot.
+![Build](https://github.com/lguberan/real-time-log-analytics/actions/workflows/tests.yml/badge.svg)
 
-## 🧱 Architecture Overview
+## 📌 Overview
 
-![Architecture Diagram](docs/architecture.png)
+This project demonstrates a real-time log analytics pipeline using Kafka, Spring Boot, Elasticsearch, and Kibana.
 
-- **Log Producer (Spring Boot)**: Simulates application logs and sends them to Kafka.
-- **Kafka Broker**: Manages log topics and message streaming.
-- **Log Consumer (Spring Boot)**: Reads logs from Kafka for further processing or storage.
-- **Optional**: Integration with **Elasticsearch** and **Kibana** for visualization and search.
+## 📊 Architecture
 
-## 🔧 Technologies
+![Architecture](docs/architecture.png)
 
-- Java 17 + Spring Boot 3.x
-- Apache Kafka
-- Docker + Docker Compose
-- (Optional) Elasticsearch + Kibana
-- Maven / Lombok / Logback
+## 🚀 Stack
+
+- Kafka (via Docker)
+- Producer microservice (Spring Boot)
+- Consumer microservice (Spring Boot)
+- Elasticsearch
+- Kibana
 
 ## 📦 Modules
 
 - `producer-service`: Simulates microservices logging into Kafka
 - `consumer-service`: Consumes and processes Kafka log messages
 - `docker-compose.yml`: Local Kafka + Zookeeper setup (optionally with ELK stack)
+-
 
-## 🚀 Getting Started
+## 📂 Data View
 
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/lguberan/real-time-log-analytics.git
-   cd real-time-log-analytics
+Make sure to create a Kibana data view:
+
+- Name: `logs*`
+- Time field: `timestamp`
+
+## 🧪 Testing
+
+```bash
+mvn clean verify
+```
+
+## 📈 Live Demo
+
+Access the [GitHub Pages demo](https://lguberan.github.io/real-time-log-analytics)
+
+## 📁 Folder Structure
+
+```
+real-time-log-analytics/
+│
+├── producer-service/
+├── consumer-service/
+├── docker-compose.yml
+├── README.md
+└── docs/
+    ├── architecture.png
+    └── index.html
+```
