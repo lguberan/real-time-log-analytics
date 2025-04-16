@@ -1,4 +1,4 @@
-package com.guberan.producer;
+package com.guberan.loganalytics.producer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.guberan.producer.model;
+package com.guberan.loganalytics.consumer.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

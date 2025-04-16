@@ -1,8 +1,8 @@
-package com.guberan.producer.service;
+package com.guberan.loganalytics.producer.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.guberan.producer.model.LogMessage;
+import com.guberan.loganalytics.producer.model.LogMessage;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
